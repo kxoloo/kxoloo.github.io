@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>dynamics</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <style>
+            #dandiv{position: absolute;
+                    top:45%;
+                    left:45%;
+                    margin:0;
+                    padding:0;
+                    background-color: gray;}
+            #spn1{position: absolute;
+                  text-align: center;
+                  vertical-align: center;
+                  top:40%;
+                  left:40%;
+                  background-color: #ff99cc;}
+            
+        </style>
+    </head>
+    <body>
+        <div id="dandiv"> 
+            <span id="spn1">
+                TATATA
+             </span>
+        </div>
+        <script>
+            $('#spn1').hover(
+                   function() {
+                       $(this).css("bacground-color","blue");
+                   }, function() {
+                       $(this).css("bacground-color","red");
+                   }
+                   );
+           $('#spn1').click(
+                   function() {
+                       window.location="http://kxoloo.github.io";                   }
+                   );
+        </script>
+    </body>
+</html>
