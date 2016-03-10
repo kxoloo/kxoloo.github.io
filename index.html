@@ -115,7 +115,8 @@ and open the template in the editor.
             $('.final-destination').hover(function() 
             {$(this).css('background-color','whitesmoke');}
             ,function() {$(this).css('background-color','black');} );
-            $('.final-destination').click(function() { window.location = "http://kxoloo.github.io/RandomizeYourself.html";
+            $('.final-destination').click(function() { $(tis).target = "_blank"; 
+                window.location = "http://kxoloo.github.io/RandomizeYourself.html";
             });
             
         </script>
