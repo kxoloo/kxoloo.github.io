@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>factorial</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+            function factorial(num) {
+                var res=1
+                for (var i=2; i<=num; i++){ //loop up to num 
+                    res=res*i;}
+                return res;
+           }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form>
+                <input type="text" id="num" name="number" placeholder="number"/>
+                <input type="text" id="res" name="result" placeholder="result"/>
+                <button onclick="calculate();"> Click </button>
+            </form>
+        </div>
+        <script>
+            function calculate() {
+               var innum= $('#num')[0].val();
+               var res = factorial(innum);
+               $('#res').val(res);}
+        </script>
+        
+    </body>
+</html>

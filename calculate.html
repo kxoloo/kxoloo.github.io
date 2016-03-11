@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <title>factorial</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+<input type='text' id='Resources'/>
+<input type='text' id='Minutes' onblur='Calculate();'/>
+<form name ="testarea" Method="Get" Action="youpage.html" id='form1'>
+<input type='text' id='answer' name='ans' />
+</form>
+</body>
+<script>
+
+
+function Calculate()
+{
+  var resources = document.getElementById('Resources').value;
+  var minutes = document.getElementById('Minutes').value; 
+  var permin = parseFloat(resources) / 60;
+  document.getElementById('answer').value=parseFloat(permin) * parseFloat(minutes);
+  document.form1.submit();
+}
+</script>
+</html>

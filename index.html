@@ -25,6 +25,24 @@ and open the template in the editor.
        font-family: Agency FB;
        background-color: black;
        text-align: center;}
+     .final-destination1{position: absolute;
+       z-index: 10;
+       left: 30%;
+       top:60%;
+       margin:1%;
+       padding: 1%;
+       font-family: Agency FB;
+       background-color: black;
+       text-align: center;}
+     .final-destination2{position: absolute;
+       z-index: 10;
+       left: 60%;
+       top:60%;
+       margin:1%;
+       padding: 1%;
+       font-family: Agency FB;
+       background-color: black;
+       text-align: center;}
      .background-wrap { opacity: 0.7;
        position:fixed;
        z-index:-1000;
@@ -111,13 +129,23 @@ and open the template in the editor.
         <div class="final-destination">      
            <p>Click<br/>Random Form<br/>Click</p>
         </div>
+        <div class="final-destination1">      
+            <a href="http://www.theuselessweb.com/">  <p>Click<br/>Random Site<br/>Click</p> </a>
+        </div>
+        <div class="final-destination2"> 
+            <p>Click</br><button id="button">PLEASE</button></br>Click<p>
+            
         <script>
+            var uselessWebButton = new uselessWebButton( document.getElementById( 'button' ) );
             $('.final-destination').hover(function() 
             {$(this).css('background-color','whitesmoke');}
             ,function() {$(this).css('background-color','black');} );
             $('.final-destination').click(function() { 
                 window.location = "http://kxoloo.github.io/RandomizeYourself.html";
             });
+            $('.final-destination1').hover(function() 
+            {$(this).css('background-color','whitesmoke');}
+            ,function() {$(this).css('background-color','black');} );
             
         </script>
     </body>
