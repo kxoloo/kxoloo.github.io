@@ -1,0 +1,48 @@
+if ((a==b)&&(b<c)) var a="k";
+
+and=&
+!=not
+<  >  <=  >= 
+
+!=  means not equal
+
+if ( test ) {
+
+} true
+
+} else { 
+
+
+} false
+
+var in1="one";
+var in2="2";
+
+
+
+if ( isNumeric(in1) && isNumeric(in2) ) {
+
+calculate (in1 , in2);
+
+}
+
+else { uyarý();
+
+}
+
+if içinde if kullanýlabilir
+
+
+switch (in2) { 
+case "one1": calculate ();
+   break;
+case 2:
+   break;
+case :
+   break;
+defoult:
+   break;
+}
+
+
+ödev forma sayý yerine yazý yazýldýðýnda error u otomatik vermeli

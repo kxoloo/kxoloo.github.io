@@ -6,44 +6,74 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>dynamics</title>
+        <title>asdf</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+        </script>
         <style>
-            #dandiv{position: absolute;
-                    top:45%;
-                    left:45%;
-                    margin:0;
-                    padding:0;
-                    background-color: gray;}
-            #spn1{position: absolute;
-                  text-align: center;
-                  vertical-align: center;
-                  top:40%;
-                  left:40%;
-                  background-color: #ff99cc;}
-            
+            .div1{position: absolute;
+            top:30%;
+            left:40%;
+            background-color: gray;
+            margin:1%;
+            padding:1%;
+            opacity: 0.7;
+            font-family: calibri;
+            text-align: center;}
         </style>
     </head>
     <body>
-        <div id="dandiv"> 
-            <span id="spn1">
-                TATATA
-             </span>
+        <div class="div1">
+            <input type="text" id="in1" placeholder="number"/><br></br>
+            <select>
+                <option value="-">-</option>
+                <option value="+">+</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select><br></br>
+            <input type="text" id="in2" placeholder="and number"/><br></br>
+            <button type="button" onclick="calculate();"> itele! </button><br></br>
+            <input type="text" id="output" disabled />
+        </div>
+        <div id="error">
+            
         </div>
         <script>
-            $('#spn1').hover(
-                   function() {
-                       $(this).css("bacground-color","blue");
-                   }, function() {
-                       $(this).css("bacground-color","red");
-                   }
-                   );
-           $('#spn1').click(
-                   function() {
-                       window.location="http://kxoloo.github.io"; }
-                   );
+            var i = 1;
+            var in1 = ($('input1').val());
+            var in2 = ($('input1').val());
+            function calculate() {
+                in1 = parseInt($('input1').val());
+                in2 = parseInt($('input2').val());
+                if(checkInput(in1,in2)) {
+                   var res= eval(in1 + $('operator').val() + in2 );
+                   $('$output').val(res);
+                } else {
+                    $('$error').html("You made "+ i +" mistakes");
+                    i++;
+                }
+            }
+            
+            function checkInput1(in1,in2) {
+                if(isNaN(in1) || isNaN(in2)) {
+                    return false;
+                } 
+                    return true;
+                }
+                function checkInput2(in1,in2) {
+                if(isNaN(in1) || isNaN(in2)) {
+                    return false;
+                } 
+                    return true;
+                }
+                function checkInput3(in1,in2) {
+                if(isNaN(in1) || isNaN(in2)) {
+                    return false;
+                } 
+                    return true;
+                }
         </script>
     </body>
 </html>
