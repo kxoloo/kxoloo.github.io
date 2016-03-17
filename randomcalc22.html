@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>asdf</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+        </script>
+        <style>
+            .divback{position: fixed;
+             background-color: black;
+             z-index: -100;
+             width:100%;
+             height:100%;}
+            .div1{position: absolute;
+            top:30%;
+            left:40%;
+            background-color: black;
+            color: white;
+            margin:1%;
+            padding:1%;
+            opacity: 0.7;
+            font-family: calibri;
+            text-align: center;}
+            #error{position: absolute;
+            top:60%;
+            left:42%;
+            background-color: black;
+            color: white;
+            margin:1%;
+            padding:1%;
+            opacity: 0.7;
+            font-family: calibri;
+            text-align: center;}
+        </style>
+    </head>
+    <body style="background-color: black;">
+        <div class="divback">
+                <object width="100%" height="100%" data="dagobah_Beatles_FLCL.swf"></object>
+        </div>
+        <div class="div1">
+            <input type="text" id="in1" placeholder="number"/><br></br>
+            <select>
+                <option value="-">-</option>
+                <option value="+">+</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select><br></br>
+            <input type="text" id="in2" placeholder="and number"/><br></br>
+            <button type="button" id="calc" value="calc" onclick="calculate();">Itele!</button><br></br>
+            <input type="text" id="output" disabled />
+        </div>
+        <div id="error">
+            
+        </div>
+        <script>
+            var i = 1;
+            function calculate() {
+                in1 = parseInt($('input1').val());
+                in2 = parseInt($('input2').val());
+                if(checkInput1(in1,in2)) {
+                   var res= eval(in1 + $('#operator').val() + in2 );
+                   $('#output').val(res);
+                } else {
+                    $('#error').html("You made" + i + "mistake");
+                    i++;
+                }
+            }
+            
+                function checkInput1(in1,in2) {
+                if(!isNaN(in1) && !isNaN(in2)) {
+                    return true;
+                } 
+                    return false;
+                }
+                function checkInput2(in1,in2) {
+                if(isNaN(in1)) if (isNaN(in2)) {
+                    return false;
+                } 
+                    return true;
+                }
+        </script>
+    </body>
+</html>
