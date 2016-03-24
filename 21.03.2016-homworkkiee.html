@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JSON avvarrroo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <style>
+            #avg{background-color: #006666;
+                      width: 90%;
+                      height: 500px;
+                      margin: 5%;
+                      font-family: Agency AB;
+                      color: #660000;
+                      text-align: center;}
+        </style>
+    </head>
+    <body>
+        <div id="avg">
+                <p id="ilk"></p>
+                
+        <script>
+            var elemans = { elemans:[
+                    {"name":"eleman1", "age":80, "height":160},
+                    {"name":"eleman2", "age":10, "height":150},
+                    {"name":"eleman3", "age":60, "height":150},
+                    {"name":"eleman4", "age":50, "height":160}]};
+        var elemID = "#ilk";
+                $(elemID)[0].innerHTML =
+                elemans.name + "<br>" + "<br>" +
+                elemans.age + "<br>" + "<br>" +
+                elemans.height +"<br>" + "<br>";
+        
+        var avgAge = calcAvgAge(elemans);
+         $('#avg').append("Average age of elemans: " + avgAge + "<br>");
+            var avgHeight = calcAvgHeight(elemans);
+            $('#avg').append("Average height of elemans: " + avgHeight + "<br>");
+            
+            function calcAvgAge(obj){
+                var totalAge = 0;
+                for(var i = 0; i < obj.elemans.length; i++){
+                    totalAge += obj.elemans[i].age;
+                }
+                return totalAge / obj.elemans.length;
+            }
+            
+            function calcAvgHeight(obj){
+                var totalHeight = 0;
+                for(var i= 0; i < obj.elemans.length; i++){
+                    totalHeight += obj.elemans[i].height;
+                }
+                return totalHeight / obj.elemans.lenght;
+            }
+        </script>
+        </div>
+    </body>
+</html>
