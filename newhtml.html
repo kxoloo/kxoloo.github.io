@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Do not drag me!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <style>
+            #target1{position: absolute;
+            background-color: red;
+            width:10%;
+            height: 10%;
+                top: 30%;
+                left: 30%;
+                text-align: center;
+            }
+            #arrow2{position: fixed;
+                background-color: black;
+            color: whitesmoke;
+            width: 5%;
+            height: 5%;
+            }
+        </style>
+        <script type="text/javascript"> 
+            
+            $(draggg);
+            function draggg() {
+                $('#arrow2').draggable();
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div id="target1">I am not here!</div>
+        <div id="arrow2">here here!</div>
+    </body>
+</html>
