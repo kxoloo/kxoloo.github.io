@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Do not drag me!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <style>
+            #targett{position: absolute;
+            background-color: red;
+            width:10%;
+            height: 10%;
+                top: 30%;
+                left: 30%;
+                text-align: center;
+            }
+            #arrow2{position: fixed;
+                background-color: black;
+            color: whitesmoke;
+            width: 5%;
+            height: 5%;
+            }
+            #bod{position:absolute;
+            width: 100%;
+            height: 100%;}
+            li{background-color: black;
+            color: whitesmoke;
+            width: 5%;
+            height: 5%;}
+        </style>
+        <script type="text/javascript"> 
+            
+            $(draggg);
+            function draggg() {
+                $('#arrow2').draggable();
+                $('li').draggable();
+                $('#targett').droppable( {
+                drop: düştü
+            } );
+                $('#target1').droppable( {
+                drop: düştü
+            } );
+                $('#target2').droppable( {
+                drop: düştü
+            } );
+                $('#target3').droppable( {
+                drop: düştü
+            } );
+                $('#target4').droppable( {
+                drop: düştü
+            } );
+                $('#target5').droppable( {
+                drop: düştü
+            } );
+                $('#target6').droppable( {
+                drop: düştü
+            } );
+                $('#target7').droppable( {
+                drop: düştü
+            } );
+                $('#target8').droppable( {
+                drop: düştü
+            } );
+            
+                $('#bod').droppable( {
+                drop: dadat
+            } );
+            }
+            
+            function düştü( event, ui ) {
+            var draggable = ui.draggable;
+            alert( 'I said I am not here!' );
+            }
+            function dadat( event, ui ) {
+            var draggable = ui.draggable;
+            alert( 'you have missed the target!' );
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="bod">
+                <ul id="u1">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>                  
+                </ul>
+        <div id="targett">I am not here!</div>
+        <div id="arrow2">here here!</div>
+        <div id="target1">bir</div>
+        <div id="target2">iki</div>
+        <div id="target3">üç</div>
+        <div id="target4">dört</div>
+        <div id="target5">beş</div>
+        <div id="target6">altı</div>
+        <div id="target7">yedi</div>
+        <div id="target8">sekiz</div>
+        
+        </div>
+    </body>
+</html>
