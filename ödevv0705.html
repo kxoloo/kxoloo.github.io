@@ -41,19 +41,20 @@ and open the template in the editor.
             });
                     $().ready(
                     function makemebetter(){
+					
+					                    function burda( event, ui ){
+                       var droppable = ui.droppable;
+                       alert( 'you have missed the target!' );
+					   }
                         for(var i=0; i<10; i++ ){
                             var elemID2 = '#div1';
                             var id = 0;
                             var words = toWords(i);
-                    $(elemID2).append("<li id='" + i + "'>" + words + "</li>");
-                    $('#' + i ).droppable();
+                    $(elemID2).append("<li id='j" + i + "'>" + words + "</li>");
+                    $('#j' + i ).droppable({drop:burda});
                     }
             });
-                    $().ready(
-                    function burda( event, ui ){
-                       var draggable = ui.draggable;
-                       alert( 'you have missed the target!' );
-            });
+
             
         </script>
     </head>
