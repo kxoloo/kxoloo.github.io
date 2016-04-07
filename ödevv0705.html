@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Do not drag me!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="toword.js"></script>
+        <style>
+            #ugly{list-style-type: none;
+               background-color: black;
+               color: whitesmoke;}
+            #div1{list-style-type: none;
+                  background-color: gray;
+            }
+            li{background-color: white;
+               color: black;
+               width: 5%;
+               height: 5%;
+               margin: 1%;
+               }
+        </style>
+        <script type="text/javascript">
+            // var elemID = '#ugly';
+            // var id = 0;
+            // var elemID2 = '#div1';
+                    $().ready(
+                    function enumaratebabe(){
+                        for(var i=0; i<10; i++){
+                            var elemID = '#ugly';
+                            var id = 0;
+                    $(elemID).append("<li id='" + i + "'>" + i + "</li>");
+                    $('#' + i ).draggable();
+                }
+            });
+                    $().ready(
+                    function makemebetter(){
+                        for(var i=0; i<10; i++ ){
+                            var elemID2 = '#div1';
+                            var id = 0;
+                            var words = toWords(i);
+                    $(elemID2).append("<li id='" + i + "'>" + words + "</li>");
+                    $('#' + i ).droppable();
+                    }
+            });
+                    $().ready(
+                    function burda( event, ui ){
+                       var draggable = ui.draggable;
+                       alert( 'you have missed the target!' );
+            });
+            
+        </script>
+    </head>
+    <body>
+        <ul id="ugly">
+            
+        </ul>
+        <ul id="div1">
+            
+        </ul>
+        
+    </body>
+</html>
