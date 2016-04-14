@@ -25,14 +25,12 @@ and open the template in the editor.
             }
         </style>
         <script type="text/javascript">
-            // var elemID = '#ugly';
-            // var id = 0;
-            // var elemID2 = '#div1';
             $().ready(
                     function enumaratebabe() {
                         for (var i = 1; i < 11; i++) {
                             var elemID = '#ugly';
                             var id = 0;
+                            $('#' + i).data('index', {index: i});
                             $(elemID).append("<li id='" + i + "'>" + i + "</li>");
                             $('#' + i).draggable();
                         }
@@ -41,27 +39,28 @@ and open the template in the editor.
                     function makemebetter() {
                         function burda(event, ui) {
                             var droppable = ui.droppable;
-                                    alert('ful-dozen!');
+                                    //alert('ful-dozen!');
                         }
                         for (var i = 1; i < 11; i++) {
                             var elemID2 = '#div1';
                             var id = 0;
                             var words = toWords(i);
+                            $('#j' +i).data('index', {index: i});
                             $(elemID2).append("<li id='j" + i + "'>" + words + "</li>");
                             $('#j' + i).droppable({drop: burda});
                         }
                     });
-
-
+                    if($('#' + i).data("index").index === $('#j' + i).data("index").index ) {
+                        $('#' + i).draggable("disable");
+                        $('#' + i).css("display","none");
+                    }
+                    $('ul').randomize();
         </script>
     </head>
     <body>
         <ul id="ugly">
-
         </ul>
         <ul id="div1">
-
         </ul>
-
     </body>
 </html>
