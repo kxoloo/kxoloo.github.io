@@ -8,9 +8,9 @@ function numYazLar() {
         $(elemIDnum).append("<li id='n" + i + "' >" + i + "</li>");
         $('#w' + i).data("index", {index: i});
         $('#n' + i).data("index", {index: i});
-        $('#w' + i).droppable({drop: function(event, ui) {
+        $('#w' + i).droppable({drop: function (event, ui) {
                 isabet(event, ui);
-        }});
+            }});
         $('#n' + i).draggable();
     }
 }
@@ -19,9 +19,9 @@ function numYazLar() {
 function isabet(event, ui) {
     var ni = ui.draggable.attr("id");
     var wi = ui.droppable.attr("id");
-    var wii = $('#' +wi);
-    var nii = $('#' +ni);
-    if(wii.data("index").index === nii.data("index").index) {
+    var wii = $('#' + wi);
+    var nii = $('#' + ni);
+    if (wii.data("index").index === nii.data("index").index) {
         alert('hello');
     }
 }

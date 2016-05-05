@@ -14,14 +14,19 @@
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js.cookie.js"></script>
-        <script type="text/javascript" src="NumberGame.js"></script>
+        <script type="text/javascript" src="js.cookies.js"></script>
+        <script type="text/javascript" src="odev.js"></script>
+        <script>
+            var rereq = require("./odev.js");
+            rereq.Numbers();
+
+        </script>
         <script>
             var reset = function () {
                 Cookies.remove("numbers");
                 Cookies.remove("numCorrect");
                 window.location.reload();
-            }
+            };
         </script>
     </head>
     <body>  
@@ -43,23 +48,24 @@
             
         </div>
         <script type="text/javascript">
-            $('document').ready(function () {
+        
+                function() {
                 var numCookie = Cookies.getJSON('numbers');
                 var numCorrect = Cookies.get('numCorrect');
                 var numbers = new Numbers(numCookie, numCorrect);
                 console.log(numbers);
                 numbers.initGame;
-                $('ul').randomize();
+                document.getElementsByName('ul').randomize();
                 var secLeft = 45;
-            });
+            };
             
             
             $.fn.randomize = function (selector) {
-                var $elems = selector ? $(this).find(selector) : $(this).children(),
+                var $elems = selector ? document.getElementsByName(this).find(selector) : document.getElementsByName(this).children(),
                         $parents = $elems.parent();
 
                 $parents.each(function () {
-                    $(this).children(selector).sort(function () {
+                    document.getElementsByName(this).children(selector).sort(function () {
                         return Math.round(Math.random()) - 0.5;
                     }).detach().appendTo(this);
                 });
